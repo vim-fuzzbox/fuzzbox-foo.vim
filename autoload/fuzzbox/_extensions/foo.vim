@@ -11,8 +11,8 @@ def Preview(wid: number, result: string)
     endif
 enddef
 
-def Select(wid: number, result: list<any>)
-    echow "You selected " .. result[0]
+def Select(wid: number, result: string)
+    echow "You selected " .. result
 enddef
 
 def Close(wid: number)
