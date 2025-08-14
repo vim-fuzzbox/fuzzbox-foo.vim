@@ -3,12 +3,11 @@ vim9script
 import autoload 'fuzzbox/selector.vim'
 
 def Preview(wid: number, result: string)
-    var msg = "Press enter to select " .. result
     if wid == -1
-        echo msg
-    else
-        popup_settext(wid, msg)
+        # preview window disabled
+        return
     endif
+    popup_settext(wid, "Press enter to select " .. result)
 enddef
 
 def Select(wid: number, result: string)
