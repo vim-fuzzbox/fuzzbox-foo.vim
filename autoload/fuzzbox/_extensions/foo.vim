@@ -19,6 +19,8 @@ def Close(wid: number)
 enddef
 
 export def Start(opts: dict<any> = {})
+    opts.prompt_title = has_key(opts, 'prompt_title') ? opts.prompt_title : 'Fuzzy Foo'
+
     selector.Start(['foo.js', 'bar.json', 'baz.jsx'], extend(opts, {
         devicons: true,
         dropdown: true,
